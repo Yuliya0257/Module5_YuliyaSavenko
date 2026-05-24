@@ -1,0 +1,1 @@
+{"cohort": "Working-age: 18-64", "age_window": "18-64", "n": 6254, "elev_profile_pct": 34.5, "phq9_pos_pct": 9.6, "K": 2, "LR_demo_AUC": 0.668, "LR_full_AUC": 0.685, "LR_dAUC": 0.017, "RF_demo_AUC": 0.675, "RF_full_AUC": 0.691, "RF_dAUC": 0.016, "LR_f1_t": 2.85, "LR_f1_p": "4.4e-03", "RF_f1_t": 5.36, "RF_f1_p": "8.5e-08"}

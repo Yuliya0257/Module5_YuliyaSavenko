@@ -1,0 +1,12 @@
+metric,value
+K-modes cost K=2,4959.0
+K-modes cost K=3,4144.0
+K-modes cost K=4,3836.0
+K-means elevated-profile size %,22.0
+K-modes elevated-profile size %,20.3
+Raw agreement (K-means vs K-modes),0.983
+Adjusted Rand index,0.924
+"K-means elevated-risk %, PHQ-9>=10",35.3
+"K-means elevated-risk %, PHQ-9<10",20.6
+"K-modes elevated-risk %, PHQ-9>=10",31.7
+"K-modes elevated-risk %, PHQ-9<10",19.1

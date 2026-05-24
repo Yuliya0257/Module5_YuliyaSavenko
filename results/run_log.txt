@@ -1,0 +1,51 @@
+==> 1. Loading NHANES P_ cycle ...
+    raw merged cohort: 2934 adults 18-39
+==> 2. Feature engineering ...
+    after PHQ-9 prorating filter: 2728
+        n  mean_age  pct_female  PHQ9_mean  PHQ9_sd  PHQ9_pos_pct
+2728 27.983871   51.026393   3.361345 4.171099      9.237537
+==> 3. Clustering CV risk profiles ...
+    K selected by silhouette: 2
+    silhouettes: {2: 0.3726500280048823, 3: 0.2743911677020378, 4: 0.2854111588730069}
+/sessions/optimistic-clever-fermi/mnt/Mod 5/HDS_ML_repo/code/run_analysis.py:437: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(["Profile 0 — low CV risk",
+    crude association: OR=2.1 (95% CI 1.59-2.77), chi2=28.7, p=8.33e-08
+==> 4. Supervised modelling ...
+    Gradient-boosting backend: from-scratch NumPy
+    Logistic regression (full)
+    Logistic regression (demographics only)
+    Random forest (full)
+    Random forest (demographics only)
+    Gradient boosting (full)
+    Gradient boosting (demographics only)
+metric     acc  bal_acc  macro_f1  roc_auc
+model                                     
+GB_demo  0.592    0.571     0.532    0.599
+GB_full  0.620    0.606     0.562    0.642
+LR_demo  0.575    0.573     0.525    0.602
+LR_full  0.605    0.591     0.547    0.637
+RF_demo  0.608    0.565     0.536    0.592
+RF_full  0.634    0.604     0.568    0.638
+    LR ablation: t=4.49, p~0.0000
+    RF ablation: t=7.47, p~0.0000
+    GB ablation: t=5.48, p~0.0000
+==> 5. Final model + interpretability ...
+    calibration: {'observed_prevalence': 0.22, 'oversampled_mean_pred': 0.46, 'oversampled_brier': 0.229, 'nonoversampled_mean_pred': 0.223, 'nonoversampled_brier': 0.166, 'baseline_brier': 0.172}
+==> 6. Subgroup fairness evaluation ...
+               subgroup   n  elev_risk_pct   acc  bal_acc  macro_f1  roc_auc
+                Overall 682           22.0 0.606    0.580     0.543    0.609
+            Sex: Female 354           23.7 0.523    0.568     0.500    0.608
+              Sex: Male 328           20.1 0.695    0.577     0.568    0.606
+            Race: MexAm 102           26.5 0.490    0.511     0.470    0.587
+          Race: NHAsian  90           11.1 0.578    0.544     0.460    0.586
+          Race: NHBlack 162           25.9 0.642    0.611     0.589    0.631
+          Race: NHWhite 209           23.4 0.627    0.586     0.561    0.613
+        Race: OtherHisp  80           22.5 0.713    0.637     0.623    0.617
+       Race: OtherMulti  39           10.3 0.487    0.604     0.423    0.736
+ Income PIR low (<1.47) 227           20.7 0.639    0.576     0.550    0.598
+         Income PIR mid 226           22.1 0.619    0.570     0.544    0.610
+Income PIR high (≥2.46) 229           23.1 0.559    0.588     0.526    0.622
+
+All outputs written to:
+  figures/  -> /sessions/optimistic-clever-fermi/mnt/Mod 5/HDS_ML_repo/figures
+  results/  -> /sessions/optimistic-clever-fermi/mnt/Mod 5/HDS_ML_repo/results

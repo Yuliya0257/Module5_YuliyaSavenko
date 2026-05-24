@@ -1,0 +1,8 @@
+{
+  "observed_prevalence": 0.22,
+  "oversampled_mean_pred": 0.46,
+  "oversampled_brier": 0.229,
+  "nonoversampled_mean_pred": 0.223,
+  "nonoversampled_brier": 0.166,
+  "baseline_brier": 0.172
+}

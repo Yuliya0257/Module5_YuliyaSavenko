@@ -1,0 +1,24 @@
+================================================================
+VALIDATION REPORT  (code/validate_ml_lib.py)
+sklearn available: False
+================================================================
+
+--- (1) Analytical / internal-consistency checks ---
+  StandardScaler: mean≈0 PASS, std≈1 PASS
+  K-means cluster purity on 3 separated blobs: 1.000 (PASS; expect ≥ 0.95)
+  LR train accuracy on linear problem: 0.950 (PASS; expect ≥ 0.85)
+  LR predict_proba rows sum to 1: PASS
+  RF train accuracy on non-linear problem: 0.965 (PASS; expect ≥ 0.85)
+  RF predict_proba rows sum to 1: PASS
+  GB train accuracy on non-linear problem: 0.968 (PASS; expect ≥ 0.85)
+  GB predict_proba rows sum to 1: PASS
+  K-modes cluster purity on 2 binary blobs: 0.973 (PASS; expect ≥ 0.95)
+  Metrics — accuracy PASS, macro_f1 PASS, balanced_acc PASS, confusion_matrix PASS
+  ROC-AUC on perfectly separable scores: 1.000 (PASS; expect 1.000)
+
+--- (2) scikit-learn not installed in this environment ---
+       Install scikit-learn and re-run for side-by-side comparison.
+
+================================================================
+SUMMARY: 11 PASS, 0 FAIL
+================================================================

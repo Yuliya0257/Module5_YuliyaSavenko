@@ -1,0 +1,1 @@
+{"cohort": "All adults: 18+", "age_window": "18-99", "n": 8223, "elev_profile_pct": 36.7, "phq9_pos_pct": 9.3, "K": 2, "LR_demo_AUC": 0.654, "LR_full_AUC": 0.677, "LR_dAUC": 0.024, "RF_demo_AUC": 0.671, "RF_full_AUC": 0.692, "RF_dAUC": 0.021, "LR_f1_t": 5.3, "LR_f1_p": "1.1e-07", "RF_f1_t": 9.09, "RF_f1_p": "0.0e+00"}

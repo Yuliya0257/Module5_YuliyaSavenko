@@ -1,0 +1,1 @@
+{"cohort": "Primary: 18-39", "age_window": "18-39", "n": 2728, "elev_profile_pct": 22.0, "phq9_pos_pct": 9.2, "K": 2, "LR_demo_AUC": 0.602, "LR_full_AUC": 0.637, "LR_dAUC": 0.036, "RF_demo_AUC": 0.595, "RF_full_AUC": 0.637, "RF_dAUC": 0.042, "LR_f1_t": 4.22, "LR_f1_p": "2.5e-05", "RF_f1_t": 7.48, "RF_f1_p": "7.3e-14"}
