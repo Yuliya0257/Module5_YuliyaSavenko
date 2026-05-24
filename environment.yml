@@ -1,0 +1,21 @@
+name: hds-ml-mod5
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - numpy>=1.26
+  - pandas>=2.0
+  - matplotlib>=3.7
+  - seaborn>=0.13
+  - python-docx>=1.0
+  - pip
+  # The from-scratch implementations in code/ml_lib.py mean
+  # scikit-learn is NOT required to run the pipeline. Uncomment
+  # below if you would like to add a reference comparison.
+  # - scikit-learn>=1.4
+  # - scipy>=1.11
+  # OPTIONAL — uncomment either to have the gradient-boosting model
+  # use an optimised library; run_analysis.py auto-detects it.
+  # - lightgbm>=4.0
+  # - xgboost>=2.0
