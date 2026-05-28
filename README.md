@@ -203,9 +203,3 @@ Adding PHQ-9 improves macro F1 significantly in all three models (paired *t*-tes
 Code is released under the MIT licence. NHANES data are public-domain and may be re-used freely; see the [NCHS Data Use Agreement](https://www.cdc.gov/nchs/data_access/restrictions.htm).
 
 The analysis is associational and not intended for clinical decision-making. Section 4.3 of the report discusses fairness considerations associated with using race and education as predictors.
-
----
-
-## Use of generative AI
-
-I used Claude (Anthropic) to help plan the analysis structure, draft and refine the Python pipeline (including the from-scratch `ml_lib.py` NumPy implementations of K-means, K-modes, logistic regression, random forest and gradient boosting), produce the figures and tables, and draft the report. All methodological choices, dataset selection, result interpretation, and final wording were reviewed and edited by me. The cited literature was selected and read by me; Claude assisted with summarising key findings from the PDFs.
